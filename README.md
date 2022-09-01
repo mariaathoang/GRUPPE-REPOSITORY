@@ -3,7 +3,7 @@
 |-------------------|----------------------------------------------------|
 |Njål Teppen Søberg | https://github.com/SquashDodo  |
 |-------------------|----------------------------------------------------|
-|Maria Anh Thu Hoang| https://github.com/mariaathoang                    |
+|**Maria Anh Thu Hoang**| https://github.com/mariaathoang                    |
 |-------------------|----------------------------------------------------|
 |Kristoffer Østby   | https://github.com/KristofferOstby                 |
 |-------------------|----------------------------------------------------|
