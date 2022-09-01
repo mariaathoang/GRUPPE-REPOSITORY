@@ -1,2 +1,2 @@
 # GRUPPE-REPOSITORY
-Test
+Kristoffer Østby - https://github.com/KristofferOstby
