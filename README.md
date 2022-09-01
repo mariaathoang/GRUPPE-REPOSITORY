@@ -7,7 +7,7 @@
 |-------------------|----------------------------------------------------|
 |**Kristoffer Østby**  | https://github.com/KristofferOstby                 |
 |-------------------|----------------------------------------------------|
-|**Nicoleta Pavelescu** | https://github.com/Nicoletapa                     |
+|**Nicoleta Pavelescu** | https://github.com/Nicoletapa 
 |-------------------|----------------------------------------------------|
 |**Jens Markus Spångberg** | https://github.com/JensUIA                      |
 |-------------------|----------------------------------------------------|
