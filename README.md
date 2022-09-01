@@ -1,7 +1,7 @@
 # GRUPPE-REPOSITORY
 
 |-------------------|----------------------------------------------------|
-|Njål Teppen Søberg | https://github.com/SquashDodo/IND-REPOSITORY.git   |
+|Njål Teppen Søberg | https://github.com/SquashDodo  |
 |-------------------|----------------------------------------------------|
 |-------------------|----------------------------------------------------|
 |Maria Anh Thu Hoang| https://github.com/mariaathoang                    |
