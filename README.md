@@ -25,7 +25,7 @@ jo mer vi bruker github. Forståelsen vår er 3 på en skala fra 1-5.
 
 
 
-<h1>FLAGGOPPGAVEN<h1>
+FLAGGOPPGAVEN
 
 Beskrivelse av prosessen for valg av "Github projects"
 I Github projects har vi uttnyttet bruken av Kanban
