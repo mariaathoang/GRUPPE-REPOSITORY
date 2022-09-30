@@ -13,9 +13,8 @@
 |-------------------|----------------------------------------------------|
 |-------------------|----------------------------------------------------|
 |Jens Markus Spångberg | https://github.com/JensUIA                      |
-|-------------------|----------------------------------------------------|
-|Camilla Bjorvand   |https://github.com/camillabjorvand                  |
-|-------------------|----------------------------------------------------|
+
+
 
 Ingen på gruppen hadde noe tidligere erfaring med git eller github, så
 det tok litt tid å bli kjent med programmet. Noen på gruppa skjønnte det
