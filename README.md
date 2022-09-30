@@ -22,3 +22,7 @@ raskere enn andre, og de hjalp resten med å løse oppgavene. Nå har alle
 en bedre forståelse om hvordan og hvorfor programmet skal brukes. Vi har 
 fortsatt ikke full kontroll på programmet, men vi forventer å bli bedre
 jo mer vi bruker github. Forståelsen vår er 3 på en skala fra 1-5.
+
+
+FLAGGOPPGAVEN
+
