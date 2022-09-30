@@ -24,5 +24,20 @@ fortsatt ikke full kontroll på programmet, men vi forventer å bli bedre
 jo mer vi bruker github. Forståelsen vår er 3 på en skala fra 1-5.
 
 
-FLAGGOPPGAVEN
 
+<h1>FLAGGOPPGAVEN<h1>
+
+Beskrivelse av prosessen for valg av "Github projects"
+I Github projects har vi uttnyttet bruken av Kanban
+
+
+Beskrivelse av prosessen for valg av relevante arbeidsoppgaver
+
+
+Definisjoner og refleksjoner rundt prosessen
+4a) bruk av <p style>
+Vi har brukt <p>-elementet med attributen "style" for å tegne det italienske flagget. Vi fant ut ganske raskt at denne måten å kode flagg på ikke var like innovativ som å bruke andre måter å kode flagg på, som for eksempel CSS og Canvas. Vi følte selv at det var litt rotete å se og skrive koden, men det gikk fint til slutt. Det er en relativ enkel måte å kode flagg på, men vi følte at andre metoder å kode flagg på, hadde blitt utnyttet og prioritert høyere enn med <p>-elementet med "style"-attributen.
+
+4b) bruk av CSS
+
+4c) bruk av <canvas>-elementet
