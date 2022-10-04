@@ -25,13 +25,13 @@ jo mer vi bruker github. Forståelsen vår er 3 på en skala fra 1-5.
 
 
 
-FLAGGOPPGAVEN
+<h5>FLAGGOPPGAVEN</h5>
 
-Beskrivelse av prosessen for valg av "Github projects"
+<b>Beskrivelse av prosessen for valg av "Github projects"</b>
 I Github projects har vi uttnyttet bruken av Kanban
 
 
-Beskrivelse av prosessen for valg av relevante arbeidsoppgaver
+<b>Beskrivelse av prosessen for valg av relevante arbeidsoppgaver</b>
 
 
 <b>Definisjoner og refleksjoner rundt prosessen</b>
