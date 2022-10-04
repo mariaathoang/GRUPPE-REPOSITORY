@@ -34,7 +34,7 @@ I Github projects har vi uttnyttet bruken av Kanban
 Beskrivelse av prosessen for valg av relevante arbeidsoppgaver
 
 
-<b>Definisjoner og refleksjoner rundt prosessen<b>
+<b>Definisjoner og refleksjoner rundt prosessen</b>
 
 4a) bruk av p style
 
