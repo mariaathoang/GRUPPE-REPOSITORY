@@ -35,8 +35,8 @@ Beskrivelse av prosessen for valg av relevante arbeidsoppgaver
 
 
 Definisjoner og refleksjoner rundt prosessen
-4a) bruk av <p style>
-Vi har brukt <p>-elementet med attributen "style" for å tegne det italienske flagget. Vi fant ut ganske raskt at denne måten å kode flagg på ikke var like innovativ som å bruke andre måter å kode flagg på, som for eksempel CSS og Canvas. Vi følte selv at det var litt rotete å se og skrive koden, men det gikk fint til slutt. Det er en relativ enkel måte å kode flagg på, men vi følte at andre metoder å kode flagg på, hadde blitt utnyttet og prioritert høyere enn med <p>-elementet med "style"-attributen.
+4a) bruk av "<p style>"
+Vi har brukt "<p>"-elementet med attributen "style" for å tegne det italienske flagget. Vi fant ut ganske raskt at denne måten å kode flagg på ikke var like innovativ som å bruke andre måter å kode flagg på, som for eksempel CSS og Canvas. Vi følte selv at det var litt rotete å se og skrive koden, men det gikk fint til slutt. Det er en relativ enkel måte å kode flagg på, men vi følte at andre metoder å kode flagg på, hadde blitt utnyttet og prioritert høyere enn med <p>-elementet med "style"-attributen.
 
 4b) bruk av CSS
 
