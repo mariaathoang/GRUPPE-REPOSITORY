@@ -40,6 +40,6 @@ Vi har brukt <p>-elementet med attributen "style" for å tegne det italienske fl
 
 4b) bruk av CSS
 
-4c) bruk av <canvas>-elementet
-Vi har brukt <canvas>-elementet for å lage et belgisk flagg. Denne metoden var mer å kode enn de andre metodene, men vi følte alikevel at det var det den mest effektive av metodene. Fargekodene er hentet fra Wikipedia, med unntak av fargen rød. Dette var fordi vi fikk problemer med den fargekoden. Ulempen med denne metodene er at den er vanskeligst å lære. Man må kunne JavaScript for å kunne bruke denne metoden. Fordelen er at den er mer effektiv enn de andre metodene når man først har lært <canvas> metoden.
+4c) bruk av canvas-elementet
+Vi har brukt canvas-elementet for å lage et belgisk flagg. Denne metoden var mer å kode enn de andre metodene, men vi følte alikevel at det var det den mest effektive av metodene. Fargekodene er hentet fra Wikipedia, med unntak av fargen rød. Dette var fordi vi fikk problemer med den fargekoden. Ulempen med denne metodene er at den er vanskeligst å lære. Man må kunne JavaScript for å kunne bruke denne metoden. Fordelen er at den er mer effektiv enn de andre metodene når man først har lært canvas metoden.
 
