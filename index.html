@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+</head>
+<body>
+    <canvas id="belgiskFlagg" width="600" height="600">
+</canvas>
+<script>
+    const canvas = document.getElementById ("belgiskFlagg");
+    const ctx = canvas.getContext ("2d");
+
+    function rectangle (bredde, hoyde, fylltype, farge) {
+        ctx.fillStyle =farge;
+        ctx.fillRect (0, 0, bredde, hoyde);
+    }
+
+function tegnBelgiskFlagg() {
+    rectangle (360, 240, "solid", "EF3340");
+    rectangle (240, 240, "solid", "#FDDA24");
+    rectangle (120, 240, "solid", "red");
+}
+
+tegnBelgiskFlagg ();
+
+</script>
+</body>
+</html>
