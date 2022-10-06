@@ -31,6 +31,8 @@ jo mer vi bruker github. Forståelsen vår er 3 på en skala fra 1-5.
 
 I Github projects har vi uttnyttet bruken av Kanban med tabell strukturen. Vi har brukt standard tabellen som Github projects gir, som følger med kolonnene "Todo", "In Progress" og "Done". I retrospekt så burde vi ha lagt til en kolonne til for "Under Review" for å få en oversikt over hvilke oppgaver som er nesten ferdige, men må fortsatt bli sett gjennom. Oppgavene vi la til var "p style - flagget", "canvas - flagget" og "p med id og/eller class - flagget", og "skrive README.md". Disse oppgavene ble flyttet fra kolonne til kolonne, etter hvert som fremgang ble gjort med dem. Vi tok også i bruk "Daily Scrum Meetings", noe som egentlig er ganske naturlig å gjøre, men det var til stor hjelp for å vite hvor langt medlemmene hadde kommet med oppgavene, og fremgangen med Kanban tabellen.
 
+Vi konfigurerte Github Pages og la til en index.html fil for å samle koden vår til en nettside som fremviste flaggene vi hadde kodet. 
+
 
 <b>Beskrivelse av prosessen for valg av relevante arbeidsoppgaver</b>
 
