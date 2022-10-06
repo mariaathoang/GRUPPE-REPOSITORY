@@ -47,9 +47,15 @@ Vi har brukt p-elementet med attributen "style" for å tegne det italienske flag
 
 4b) <i>bruk av CSS</i>
 
-Vi har brukt css-funksjonen til å lage et Bangladeshisk flagg. Vi valgte å bruke inline-css fordi det virket enkelt å ha oversikt over da du jobbet. Vi kan se hvordan det å kunne dele opp dokumentet i to, der man konfigurer utseende i headeren og selve elementet i bodien kan være nyttig, men som nybegynnere ble det en del småfeil vi slet med å se som førte oss på villspor. Det ble mye søking etter en fiks på nettet på grunn av en liten semikilon som manglet. I dokumentet så har vi to metoder for å vise den røde sirkelen i flagget, både med å hente et bilde fra nett, og å lage en sirkel ved hjelp av avrunding av et kvadrat. Vi valgte å bruke avrundingen fordi med den kunne vi få riktige farger i motsetning til nettbilde-metoden (nettbilde-metoden er kommentert bort, så den blir ikke brukt).
+Vi har brukt css-funksjonen til å lage et Bangladeshisk flagg (https://en.wikipedia.org/wiki/Flag_of_Bangladesh) . Vi valgte å bruke inline-css fordi det virket enkelt å ha oversikt over da man jobbet. Vi kan se hvordan det å kunne dele opp dokumentet i to, der man konfigurer klassene i headeren og tar de i bruk i elementet i bodien kan være nyttig, men som nybegynnere ble det en del småfeil vi slet med å se på grunn av det som førte oss på villspor. Det ble mye søking etter en fiks på nettet på grunn av et lite semikolon som manglet. I dokumentet så har vi to metoder for å vise den røde sirkelen i flagget, både med å hente et bilde fra nett, og å lage en sirkel ved hjelp av avrunding av et kvadrat (https://stackoverflow.com/questions/6921792/how-to-draw-circle-in-html-page) som vi da flyttet på i html siden. Vi valgte å bruke avrundingen fordi med den kunne vi velge korrekte farger i motsetning til nettbilde-metoden (nettbilde-metoden er kommentert bort, så den blir ikke brukt (https://www.w3schools.com/html/html_comments.asp ). Vi valgte å bruke «class» istedenfor «id» fordi vi tenkte vi kanskje kunne bruke «classen» til flere objekter samtidig (https://www.geeksforgeeks.org/difference-between-an-id-and-class-in-html/) men siden vi valgte Bangladesh sitt flagg var ikke det nødvendig.
 
 4c) <i>bruk av canvas-elementet</i>
 
 Vi har brukt canvas-elementet for å lage et belgisk flagg. Denne metoden var mer å kode enn de andre metodene, men vi følte alikevel at det var det den mest effektive av metodene. Fargekodene er hentet fra Wikipedia, med unntak av fargen rød. Dette var fordi vi fikk problemer med den fargekoden. Ulempen med denne metodene er at den er vanskeligst å lære. Man må kunne JavaScript for å kunne bruke denne metoden. Fordelen er at den er mer effektiv enn de andre metodene når man først har lært canvas metoden.
+
+Referat:
+https://www.geeksforgeeks.org/difference-between-an-id-and-class-in-html/
+https://stackoverflow.com/questions/6921792/how-to-draw-circle-in-html-page
+https://www.w3schools.com/html/html_comments.asp
+https://en.wikipedia.org/wiki/Flag_of_Bangladesh
 
