@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<!-- forsiden -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="forsidestyle.css" rel="stylesheet">
+        <title>How We Roll</title>
 
+        <!-- starten på navigasjons bar -->
+        <div class="forside">
+            <ul>
+                <li><a href="forside.html">UiA - 11b</a></li>
+            </ul>
+        </div>
+        
+        <style> 
+            .topnav {
+                background-color: rgb(232, 106, 106);
+                border-radius: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .topnav ul {
+                overflow: auto;
+            }
+            .topnav li{
+                float:left;
+                list-style: none;
+                margin: 13px 20px;
+
+            }
+            .topnav li a{
+                padding: 3px 3px;
+                text-decoration: none;
+                color: white;
+
+            }
+            .topnav li a:hover{
+                color: red;
+            }
+            .forside{
+                font-size: 36px;
+                font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: rgb(255, 138, 138);
+            }
+            .forside ul{
+                overflow: auto;
+                margin-bottom: 10px;
+            }
+            .forside li{
+                float: left;
+                list-style: none;
+                margin: 13px 20px;
+            }
+            .forside li a{
+                padding: 3px 3px;
+                text-decoration: none;
+                color: white;
+            }
+			
+	/* boksene vi skal ha info om oss sjøl, 
+	bakgrunnsfarge-delen overstyrer ned i body siden alle boksene skal ha forskjellige farger, har hvit for problemløsningsgrunner. */
+            .rect {
+                width: 375px;
+                height: 500px;
+                border: 2px solid aquamarine;
+		border-radius: 5%;
+                text-align: center;
+                float: left;
+		position: relative;
+                margin-top: 70px;
+                margin-left: 60px;
+                font-family: Arial, Helvetica, sans-serif;
+		background-color: white;
+                }
+				
+	/* skyggen under boksene, er posisjonert avhengig av rektingelet */
+            
+            .shad-rect1 {
+                width: 375px;
+                height: 500px;
+                background-color: aquamarine;
+                float: left;
+                z-index: -1;
+                position: absolute;
+                float: left;
+		right: 20px;
+		top: 20px; 
+		border-radius: 5%;
+           }
+		   
+        </style>
+    </head>
+
+    <body>
+  
+        <header>
+            <nav class="topnav">
+                <ul>
+                    <li><a href="how-we-roll.html">HWR</a></li> 
+                    <li><a href="#Om-oss">Prosess</a></li>
+                    <li><a href="#Prosjekter">Prosjekter</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <section>
+		<!-- Hvert rektangel skal ha et bilde, litt info om oss og en spesifikk farge som vi også skal bruke på slider delen. 
+		Vi har navn på personen sin boks, info om personen, et bilde av personen og en personlig farge tiln. 
+		Til det elementet/boksen har vi også lagt til en annen boks under som fungerer som en skygge.-->
+            <div class="rect">
+                <h1>Navn1</h1>
+                <p>info</p>
+                <img src="source" width="" height="">
+					<div class="shad-rect1"></div>
+            </div>
+
+            <div class="rect">
+                <h1>Navn2</h1>
+                <p>info</p>
+                <img src="source" width="" height="">
+					<div class="shad-rect1"></div>
+            </div>
+
+            <div style="background-color:#EC8993;" class="rect">
+                <h1>Navn3</h1>
+                <p>info</p>
+                <img src="source" width="" height="">
+					<div class="shad-rect1"></div>
+            </div>
+
+            <div class="rect">
+                <h1>Navn4</h1>
+                <p>info</p>
+                <img src="source" width="" height="">
+					<div class="shad-rect1"></div>
+            </div>
+
+            <div class="rect">
+                <h1>Navn5</h1>
+                <p>info</p>
+                <img src="source" width="" height="">
+					<div class="shad-rect1"></div>
+            </div>
+        </section>
+		
+		
+    </body>
+
+
+</html>
