@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet"/>
+    <title>HowWeRoll prototype (lagring)</title>
+    <!-- Med denne filen ønsker vi å bevise at vi kan samle inn data ... -->
+</head>  
+   <!-- navigation bar -->
+    <div class="forside">
+        <ul>
+            <li><a href="forside.html">UiA - 11b</a></li>
+        </ul>
+    </div>
+    
+    <style>
+        .topnav {
+            background-color: rgb(255, 138, 138);
+            border-radius: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .topnav ul {
+            overflow: auto;
+        }
+        .topnav li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .topnav li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+
+        }
+        .topnav li a:hover{
+            color: red;
+        }
+        .forside{
+            font-size: 36px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(255, 138, 138);
+            border-radius: 30px;
+        }
+        .forside ul{
+            overflow: auto;
+            margin-bottom: 10px;
+        }
+        .forside li{
+            float: left;
+            list-style: none;
+            margin: 13px 20px;
+        }
+        .forside li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+        section {
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        border-style: solid;
+        border-color: rgb(255, 138, 138);
+        border-radius: 10px;
+        padding: 1em;
+        position: absolute;
+        top: 500px;
+        left: 50%;
+        margin-right: -50%;
+        margin-bottom: auto;
+        transform: translate(-50%, -50%);
+        height:initial;
+    
+    }
+     
+    </style>
+<!--https://imttv.github.io/HWR/hwr-report.html -->
+<!-- navigation bar -->
+<body>
+    <header>
+        <nav class="topnav">
+            <ul>
+                <li><a href="how-we-roll.html">HWR</a></li> <!-- bytt ut how-we-roll.html med det HWR filen heter -->
+                <li><a href="#Om-oss">Prosess</a></li>
+                <li><a href="#Prosjekter">Prosjekter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+  <!-- Her skrives alt innhold, som man ønsker å "tegne" på skjermen. -->
+  <!-- Issue se https://html.spec.whatwg.org/multipage/forms.html#introduction-4 -->
+  <!-- How we roll parametre -->
+  <form style="text-align: center;">
+      <p><label for="Fornavn">Fornavn:</label>
+          <input type="text" name="Fornavn" id="Fornavn" /></p>
+
+
+      <p>HowWeRoll-parametre:</p>
+
+      <p>
+          <!-- dorn - day or night -->
+          <label for="dorn">Morgenfugl</label>
+          <input type="range" id="dorn" name="dorn" value="50">
+          <label for="dorn">Nattugle</label>
+      </p>
+
+      <p>
+          <!-- cora - cooperate or alone -->
+          <label for="cora">Jobbe med det sammen</label>
+          <input type="range" id="cora" name="cora" value="50">
+          <label for="cora">Gå for seg selv og tenke</label>
+      </p>
+      <p>
+          <label for="jorsl">Jobbe jevnt med arbeidet</label> 
+          <input type="range" id="jorsl" name="jorsl" value="50">
+          <label for="jorsl">Jobbe i siste liten</label>
+      </p>
+
+      <p>
+          <label for="bori">Bestemt timeplan</label>
+          <input type="range" id="bori" name="bori" value="50">
+          <label for="bori">Ingen timeplan</label>
+      </p>
+      <p>
+          <label for="iore">Introvert</label>
+          <input type="range" id="iore" name="iore" value="50">
+          <label for="iore">Extrovert</label>
+      </p>
+      <p>
+          <label for="korh">Katt</label>
+          <input type="range" id="korh" name="korh" value="50">
+          <label for="korh">Hund</label>
+      </p>
+      <p>
+          <label for="moru">Ananas på pizza</label>
+          <input type="range" id="moru" name="moru" value="50">
+          <label for="moru">ikke ananas på pizza</label>
+      </p>
+    
+      <button id="button" type="submit">Gjør noe</button>
+      <input type="button" onclick="window.location.href='HWR1.html';" value="onclick">
+   <!-- samlende data -->
+    <div class="results span">
+         <h2>Form Data</h2>
+        <pre class="results">
+        </pre>
+    </div>
+   </form>
+
+</section>
+
+  <script>
+     var trxid=document.getElementById("trxid");
+     var button=document.getElementById("button");
+  
+    button.onclick=function (){
+        
+    } 
+    // kode fra Janis - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+   // Example POST method implementation using fetch:
+   async function postData(url = '', data = {}) {
+       // Default options are marked with *
+       const response = await fetch(url, {
+           method: 'POST', // *GET, POST, PUT, DELETE, etc.
+           mode: 'cors', // no-cors, *cors, same-origin
+           cache: 'no-cache', // *default, no-cache, reload, force-cache,only-if-cached
+           credentials: 'same-origin', // include, *same-origin, omit
+           headers: {
+               'Content-Type': 'application/json',
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+           },
+           redirect: 'follow', // manual, *follow, error
+           referrerPolicy: 'no-referrer', // no-referrer,*no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+           body: JSON.stringify(data) // body data type must match"Content-Type"header
+       });
+       return response.json(); // parses JSON response into native JavaScriptobjects
+   }
+
+   function handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const formJSON = Object.fromEntries(data.entries());
+        const results = document.querySelector('.results pre');
+        postData('https://bacit.info/', formJSON)
+        .then(data => {
+           results.innerText = JSON.stringify(data, null, 2);
+   // modelul linkului ?
+       
+   })
+}
+   const form = document.querySelector('form');
+   form.addEventListener('submit', handleSubmit);
+  </script>
+</body>
+</html>

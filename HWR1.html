@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+    <link href="style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>How WE Roll</title>
+    <!-- Navigation bar -->
+</head>
+<div class="forside">
+    <ul>
+        <li><a href="forside.html">UiA - 11b</a></li>
+    </ul>
+</div>
+<style>
+    .topnav {
+        background-color: rgb(255, 138, 138);
+        border-radius: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .topnav ul {
+        overflow: auto;
+    }
+    .topnav li{
+        float:left;
+        list-style: none;
+        margin: 13px 20px;
+
+    }
+    .topnav li a{
+        padding: 3px 3px;
+        text-decoration: none;
+        color: white;
+
+    }
+    .topnav li a:hover{
+        color: red;
+    }
+    .forside{
+        font-size: 36px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(255, 138, 138);
+        border-radius: 30px;
+    }
+    .forside ul{
+        overflow: auto;
+        margin-bottom: 10px;
+    }
+    .forside li{
+        float: left;
+        list-style: none;
+        margin: 13px 20px;
+    }
+    .forside li a{
+        padding: 3px 3px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    section {
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        border-style: solid;
+        border-color: rgb(255, 138, 138);
+        border-radius: 10px;
+        padding: 1em;
+        position: absolute;
+        top: 500px;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        width: 1000px;
+        }
+</style>
+
+<!-- navigation bar -->
+<body>
+    <header>
+        <nav class="topnav">
+            <ul>
+                <li><a href="HWR.html">HWR</a></li> <!-- bytt ut how-we-roll.html med det HWR filen heter -->
+                <li><a href="#Om-oss">Prosess</a></li>
+                <li><a href="#Prosjekter">Prosjekter</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- grafen i canvas(?)-->
+<section>
+    <canvas id="data01" width="900px" height="450px" ></canvas>
+    <script>
+        function drawDashedLine(pattern) {
+            ctx.beginPath();
+            ctx.setLineDash(pattern);
+            ctx.moveTo(200, y);
+            ctx.lineTo(550, y);
+            ctx.stroke();
+            y += 50;
+            
+        }
+        const canvas = document.getElementById("data01");
+        const ctx = canvas.getContext("2d");
+        let y = 85;
+        
+
+
+        drawDashedLine([1, 1]); 
+        drawDashedLine([1, 1]); 
+        drawDashedLine([1, 1]);
+        drawDashedLine([1, 1]); 
+        drawDashedLine([1, 1]); 
+        drawDashedLine([1, 1]);
+        drawDashedLine([1, 1]);
+
+        ctx.font = '16px Arial';
+        ctx.fillText('Morgenfugl', 110, 85,);
+        ctx.fillText('Nattugle', 560, 85,);
+
+        ctx.fillText('Introvert', 130, 135,);
+        ctx.fillText('Extrovert', 560, 135,);
+
+        ctx.fillText('Jobbe med det sammen', 19, 185,);
+        ctx.fillText('Gå for seg selv', 560, 185,);
+
+        ctx.fillText('Jobbe jevnt med arbeidet', 10, 235,);
+        ctx.fillText('Jobbe i siste liten', 560, 235);
+
+        ctx.fillText('Bestemt timeplan', 69, 285,);
+        ctx.fillText('Ingen timeplan', 560, 285,);
+
+        ctx.fillText('Katt', 163, 335,);
+        ctx.fillText('Hund', 560, 335,);
+
+        ctx.fillText('Ananas på pizza', 73, 385,);
+        ctx.fillText('Ikke ananas på pizza', 560, 385,);
+
+        ctx.fillText('Jens', 820, 180);
+        ctx.fillText('Kristoffer', 820, 210);
+        ctx.fillText('Maria', 820, 240);
+        ctx.fillText('Nicoleta', 820, 270);
+        ctx.fillText('Njål', 820, 300);
+        
+
+        var X = 800;
+        var Y = 175;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "red";
+        ctx.setLineDash([]);
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black"
+        ctx.stroke();
+        ctx.closePath(); 
+        
+        
+        var X = 800;
+        var Y = 205;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "rgb(255, 138, 138)";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black"
+        ctx.stroke();
+        ctx.closePath(); 
+
+        var X = 800;
+        var Y = 235;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black"
+        ctx.stroke();
+        ctx.closePath(); 
+
+        var X = 800;
+        var Y = 265;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black"
+        ctx.stroke();
+        ctx.closePath(); 
+
+        var X = 800;
+        var Y = 295;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "pink";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black"
+        ctx.stroke();
+        ctx.closePath(); 
+
+        //fetch("https://bacit.info/20221108121721-1b47bd614d0b582b8fc5fa3646889a92.json", {cache: 'no-cache'})
+        //.then(response=> respone.json())
+        //.then(data => {console.log(data);
+           
+            var X = 800;
+            var Y = 175;
+            var R = 6;
+            ctx.beginPath();
+            ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+            ctx.fillStyle = "red";
+            ctx.setLineDash([]);
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "black"
+            ctx.stroke();
+            ctx.closePath(); 
+
+            var X = 200 + parseInt(data.dorn, 50);
+            var Y = 85;
+            var R = 6;
+            ctx.beginPath();
+            ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+            ctx.fillStyle = "red";
+            ctx.setLineDash([]);
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "black"
+            ctx.stroke();
+            ctx.closePath();
+ 
+       
+       
+        
+        </script>
+</section>
+
+
+</body>
+
+
+
+</html>
