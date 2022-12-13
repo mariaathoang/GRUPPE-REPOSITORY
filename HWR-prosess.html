@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +10,17 @@
 </head>  
    <!-- navigation bar -->
     <div class="forside">
-        <ul>
+        <ul> 
             <li><a href="HWR-copy3.html">UiA - 11b</a></li>
         </ul>
     </div>
     
     <style>
-        .topnav {
-            background-color: rgb(255, 138, 138);
+       .topnav {
+            background-color: rgb(232, 106, 106);
             border-radius: 30px;
             font-family: Arial, Helvetica, sans-serif;
+			
         }
         .topnav ul {
             overflow: auto;
@@ -45,7 +45,9 @@
             font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
             background-color: rgb(255, 138, 138);
-            border-radius: 30px;
+			
+			
+           
         }
         .forside ul{
             overflow: auto;
@@ -59,7 +61,7 @@
         .forside li a{
             padding: 3px 3px;
             text-decoration: none;
-            color: rgb(0, 0, 0);
+            color: white;
         }
         section {
             max-width: 800px;
@@ -80,7 +82,63 @@
                 margin-left: 100px;
                 margin-right: 100px;
                 font-family: Arial, Helvetica, sans-serif;
+				font-weight: bold;
+				font-size: 16;
             }
+			
+		.rect {
+                width: 650px;
+                height: 600px;
+                border: 2px solid aquamarine;
+				border-radius: 5%;
+                text-align: center;
+                float: center;
+				position: relative;
+                
+                font-family: Arial, Helvetica, sans-serif;
+				background-color: pink;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50px;
+                }
+				
+		.shad-rect1 {
+                width: 650px;
+                height: 600px;
+                background-color: aquamarine;
+				z-index: -1;
+                position: absolute;
+                float:;
+				right: 20px;
+				top: 20px;
+				border-radius: 5%;
+           }
+		   		.rect2 {
+                width: 350px;
+                height: 100px;
+                border: 2px solid aquamarine;
+				border-radius: 5%;
+                text-align: center;
+                float: center;
+				position: relative;
+                
+                font-family: Arial, Helvetica, sans-serif;
+				background-color: pink;
+				margin-left: auto;
+				margin-right: auto;
+                }
+				
+		.shad-rect2 {
+                width: 350px;
+                height: 100px;
+                background-color: aquamarine;
+				z-index: -1;
+                position: absolute;
+                float:;
+				right: 8px;
+				top: 8px;
+				border-radius: 5%;
+           }
     </style>
 <!--https://imttv.github.io/HWR/hwr-report.html -->
 <!-- navigation bar -->
@@ -96,11 +154,19 @@
     </header>
 
     <section>
-        <h1 class="overskrift">P R O S E S S</h1>
+        <div>
+		<div class="rect2">
+		<h1 class="overskrift">P R O S E S S</h1>
+		<div class="shad-rect2">
+		</div> </div> </div>
+		
+		<div class="rect"> 
+		<div class="shad-rect1"> </div>
         <p class="tekst">Det var viktig for oss å holde en god struktur på prosessen for å oppnå et tilfredsstillende mål. Vi delte oppgaven opp mellom alle medlemmene med tanke på kunnskapene og evnene til hver individuell person i gruppen. Og vi passet på at alle måtte kode i oppgaven.</p>
         <p class="tekst">Vi startet med å planlegge hvordan nettsiden skulle se ut. Etter vi hadde planlagt designet, startet vi å kode vår del. Vi møttes opp mellom 1-2 ganger i uken for å snakke om prosessen og om vi trengte hjelp til noe eller for å diskutere om nye ideer for prosjektet.</p>
         <p class="tekst">Alle i gruppen hadde fått en grunnleggende forståelse av html og CSS etter flagg-oppgaven, så vi bygde videre på kunnskapen vi hadde bygd og delte ideer og kunnskap om kodespråkene. Når alle var ferdig med hver sin individuelle del, samlet vi oss og satt i sammen prosjektet på GitHub</p>
         
+		</div>
     </section>
 
   
