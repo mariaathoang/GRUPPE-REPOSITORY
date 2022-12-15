@@ -46,8 +46,8 @@
             }
             .forside ul {
                 overflow: auto;
-                margin-bottom: 0px;
-                margin-top: 5px;
+                margin-bottom: 10px;
+                margin-top: px;
                 
             }
             .forside li {
@@ -64,19 +64,20 @@
             /* overskrift PROSJEKTER */
             .overskrift {
                 font-family: Arial, Helvetica, sans-serif;
+				z-index: 10;
                 text-align: center;
                 margin-top: 40px;
                 text-shadow: 5px 5px rgb(255, 183, 183); /* https://www.w3schools.com/css/css3_shadows.asp */
             }
 
-            /* CSS for styling av posisjon og størrelse av bildene etc. */
+            <!-- /* CSS for styling av posisjon og størrelse av bildene etc. */
             .flagg {
                 text-align: center;
                 margin-top: 40px;
                 margin-left: 300px;
                 margin-right: 300px;
                 font-family: Arial, Helvetica, sans-serif;
-            }
+            } -->
 
             .flaggbilde1 {
                 margin-top: 40px;
@@ -87,6 +88,68 @@
                 margin-top: 40px;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* https://www.w3schools.com/css/css3_shadows_box.asp */
                 position: relative;
+            }
+
+		.rect1 {
+                width: 650px;
+                height: 500px;
+                border: 2px solid aquamarine;
+				border-radius: 5%;
+                text-align: center;
+            
+				position: relative;
+                z-index: ;
+                font-family: Arial, Helvetica, sans-serif;
+				background-color: pink;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50px;
+                }
+				
+		.shad-rect1 {
+                width: 650px;
+                height: 500px;
+                background-color: aquamarine;
+				z-index: -1;
+                position: absolute;
+                right: 20px;
+				top: 20px;
+				border-radius: 5%;
+           }
+					   		.rect2 {
+                width: 350px;
+                height: 100px;
+                border: 2px solid aquamarine;
+				border-radius: 5%;
+                text-align: center;
+                float: center;
+				position: relative;
+                
+                font-family: Arial, Helvetica, sans-serif;
+				background-color: pink;
+				margin-left: auto;
+				margin-right: auto;
+                }
+				
+		.shad-rect2 {
+                width: 350px;
+                height: 100px;
+                background-color: aquamarine;
+				z-index: -1;
+                position: absolute;
+                float:;
+				right: 8px;
+				top: 8px;
+				border-radius: 5%;
+           }
+		   
+		   .ord {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+				font-weight: bold;
+				font-size: 16;
+				z-index: 3;
+				
             }
         </style>
     </head>
@@ -104,26 +167,36 @@
         </header>
 
         <!-- visning av flaggoppgaven med bilder, tekst og link til flagg-repository -->
-        <h1 class="overskrift">P R O S J E K T E R</h1>
-        <div class="flagg">
-            <h2>Flaggoppgaven - IS-114</h2>
-            <p>Formålet med denne oppgaven var at studentene skulle bli kjent med
+       <div>
+	   <div class="rect2">
+		<h1 class="overskrift">P R O S J E K T E R</h1>
+		<div class="shad-rect2">
+		</div> </div>
+		</div>
+		
+		<div>
+		<div class="rect1">
+            <h2 class="ord">Flaggoppgaven - IS-114</h2>
+            
+			<p class="ord">Formålet med denne oppgaven var at studentene skulle bli kjent med
                 grunnleggende faser av systemutvikling, basert på et relativt trivielt eksempel,
                 - programmatisk produsere noen flagg av nasjonalstater.
             </p>
-            <p>I denne oppgaven har gruppe 11b valgt å programmere flagget til de følgende landene:
+            <p class="ord"> I denne oppgaven har gruppe 11b valgt å programmere flagget til de følgende landene:
                 <b>Italia, Belgia og Bangladesh</b>. Disse flaggene har blitt programmert med
                 bruken av p-elementet med "style" attributen, CSS og canvas-elementet.</p>
             <a href="https://github.com/mariaathoang/GRUPPE-REPOSITORY">Linken til flagg-repository</a>
+			
             <div class="flaggbilder">
                 <img class=flaggbilde1 src="flagg1.jpeg" alt="Flaggoppgaven" width="500" height="500"><br>
                 <img class=flaggbilde2 src="flagg2.jpeg" alt="Flaggoppgaven" width="500" height="500">
-            </div>
+            </div> 
             <br>
 
             <h1>Ingen flere prosjekter har blitt laget enda!</h1>
-
-        </div>
+			<div class="shad-rect1">
+</div> </div> </div>
+        
     </body>
 
 </html>
