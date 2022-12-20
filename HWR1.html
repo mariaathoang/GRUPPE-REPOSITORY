@@ -8,7 +8,7 @@
 </head>
 <div class="forside">
     <ul>
-        <li><a href="HWR-copy3.html">UiA - 11b</a></li>
+        <li><a href="forside.html">UiA - 11b</a></li>
     </ul>
 </div>
 <style>
@@ -70,6 +70,19 @@
         transform: translate(-50%, -50%);
         width: 1000px;
         }
+    
+        .button {
+        width: 120px;
+        height: 30px;
+        color: black;
+        font-style: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        background-color: rgb(255, 138, 138);
+        border-radius: 10px;
+        margin-left: 10px;
+    } 
+    
 </style>
 
 <!-- navigation bar -->
@@ -78,30 +91,49 @@
         <nav class="topnav">
             <ul>
                 <li><a href="HWR.html">HWR</a></li> <!-- bytt ut how-we-roll.html med det HWR filen heter -->
-                <li><a href="HWR-prosess.html">Prosess</a></li>
-                <li><a href="HWR-prosjekter.html">Prosjekter</a></li>
+                <li><a href="#Om-oss">Prosess</a></li>
+                <li><a href="#Prosjekter">Prosjekter</a></li>
             </ul>
         </nav>
     </header>
 <!-- grafen i canvas(?)-->
 <section>
-    <canvas id="data01" width="900px" height="450px" ></canvas>
+    
+        <p></p>
+        Lim inn id: <input type="text" value="" id="timetrxidPASTE" style="width: 700px"> 
+       <input type="button"  class="button" id="btnData" value="Visualiser"><br> 
+       <div class="results" id="results">
+            
+            <h2>Data:</h2>
+            <pre></pre>     
+        </div>
+
+        <div id="debug"></div>
+    
+
+<canvas id="data" width="900px" height="450px"></canvas>
     <script>
+          var timetrxidPASTE=document.getElementById("timetrxidPASTE");
+          var btnData=document.getElementById("btnData");
+   
+     const results = document.querySelector('.results pre');
+     const canvas = document.getElementById("data");
+        const ctx = canvas.getContext("2d");
+         
+        
+
         function drawDashedLine(pattern) {
             ctx.beginPath();
             ctx.setLineDash(pattern);
             ctx.moveTo(200, y);
-            ctx.lineTo(550, y);
+            ctx.lineTo(570, y);
             ctx.stroke();
             y += 50;
-            
         }
-        const canvas = document.getElementById("data01");
-        const ctx = canvas.getContext("2d");
+        
+        
         let y = 85;
         
-
-
         drawDashedLine([1, 1]); 
         drawDashedLine([1, 1]); 
         drawDashedLine([1, 1]);
@@ -112,25 +144,25 @@
 
         ctx.font = '16px Arial';
         ctx.fillText('Morgenfugl', 110, 85,);
-        ctx.fillText('Nattugle', 560, 85,);
+        ctx.fillText('Nattugle', 580, 85,);
 
         ctx.fillText('Introvert', 130, 135,);
-        ctx.fillText('Extrovert', 560, 135,);
+        ctx.fillText('Extrovert', 580, 135,);
 
         ctx.fillText('Jobbe med det sammen', 19, 185,);
-        ctx.fillText('Gå for seg selv', 560, 185,);
+        ctx.fillText('Gå for seg selv', 580, 185,);
 
         ctx.fillText('Jobbe jevnt med arbeidet', 10, 235,);
-        ctx.fillText('Jobbe i siste liten', 560, 235);
+        ctx.fillText('Jobbe i siste liten', 580, 235);
 
         ctx.fillText('Bestemt timeplan', 69, 285,);
-        ctx.fillText('Ingen timeplan', 560, 285,);
+        ctx.fillText('Ingen timeplan', 580, 285,);
 
         ctx.fillText('Katt', 163, 335,);
-        ctx.fillText('Hund', 560, 335,);
+        ctx.fillText('Hund', 580, 335,);
 
         ctx.fillText('Ananas på pizza', 73, 385,);
-        ctx.fillText('Ikke ananas på pizza', 560, 385,);
+        ctx.fillText('Ikke ananas på pizza', 580, 385,);
 
         ctx.fillText('Jens', 820, 180);
         ctx.fillText('Kristoffer', 820, 210);
@@ -201,45 +233,578 @@
         ctx.stroke();
         ctx.closePath(); 
 
-        //fetch("https://bacit.info/20221108121721-1b47bd614d0b582b8fc5fa3646889a92.json", {cache: 'no-cache'})
-        //.then(response=> respone.json())
-        //.then(data => {console.log(data);
-           
-            var X = 800;
-            var Y = 175;
-            var R = 6;
-            ctx.beginPath();
-            ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
-            ctx.fillStyle = "red";
-            ctx.setLineDash([]);
-            ctx.fill();
-            ctx.lineWidth = 2;
-            ctx.strokeStyle = "black"
-            ctx.stroke();
-            ctx.closePath(); 
+    
+   
+//data
+//Nicoleta
+fetch("https://bacit.info/hwr/20221110124046-e23ab3e763fceed6f2dd99a80340bc7c.json", {cache: 'no-cache'})
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        var X = 200 + parseInt(data.dorn, 19);
+        var Y = 85;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+        convertToInteger();
 
-            var X = 200 + parseInt(data.dorn, 50);
-            var Y = 85;
-            var R = 6;
-            ctx.beginPath();
-            ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
-            ctx.fillStyle = "red";
-            ctx.setLineDash([]);
-            ctx.fill();
-            ctx.lineWidth = 2;
-            ctx.strokeStyle = "black"
-            ctx.stroke();
-            ctx.closePath();
- 
-       
-       
-        
+        var X = 200 + parseInt(data.cora, 19);
+        var Y = 135;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.jorsl, 19);
+        var Y = 185;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.bori, 19);
+        var Y = 235;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.iore, 19);
+        var Y = 285;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.korh, 19);
+        var Y = 335;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+    
+        var X = 200 + parseInt(data.moru, 19);
+        var Y = 385;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+    });
+
+        //Kristoffer 
+        fetch("https://bacit.info/hwr/20221110123550-f278bc45ba5c52e7d1a4401732231fcc.json", {cache: 'no-cache'})
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+
+        var X = 200 + parseInt(data.dorn, 19);
+        var Y = 85;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.cora, 19);
+        var Y = 135;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.jorsl, 19);
+        var Y = 185;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.bori, 19);
+        var Y = 235;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.iore, 19);
+        var Y = 285;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.korh, 19);
+        var Y = 335;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+    
+        var X = 200 + parseInt(data.moru, 19);
+        var Y = 385;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+    
+    });
+    
+    //Maria
+    fetch("https://bacit.info/hwr/20221110123700-49b12825a52ad0e82d9f1d481e94db2d.json", {cache: 'no-cache'})
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+
+        var X = 200 + parseInt(data.dorn, 19);
+        var Y = 85;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "pink";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.cora, 19);
+        var Y = 135;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "pink";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.jorsl, 19);
+        var Y = 185;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "pink";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.bori, 19);
+        var Y = 235;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "pink";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.iore, 19);
+        var Y = 285;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "pink";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.korh, 19);
+        var Y = 335;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "pink";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+    
+        var X = 200 + parseInt(data.moru, 19);
+        var Y = 385;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "pink";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+    });
+    
+    
+    //Jens
+    fetch("https://bacit.info/hwr/20221110123756-cbb14239bf35b61905a528ec4b48ea9c.json", {cache: 'no-cache'})
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+
+        var X = 200 + parseInt(data.dorn, 19);
+        var Y = 85;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.cora, 19);
+        var Y = 135;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.jorsl, 19);
+        var Y = 185;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.bori, 19);
+        var Y = 235;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.iore, 19);
+        var Y = 285;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.korh, 19);
+        var Y = 335;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+    
+        var X = 200 + parseInt(data.moru, 19);
+        var Y = 385;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+    });
+    
+    //Njål 
+    fetch("https://bacit.info/hwr/20221110123857-557a09771a0cb6de8114d50cbacaf36c.json", {cache: 'no-cache'})
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+
+        var X = 200 + parseInt(data.dorn, 19);
+        var Y = 85;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.cora, 19);
+        var Y = 135;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.jorsl, 19);
+        var Y = 185;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.bori, 19);
+        var Y = 235;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.iore, 19);
+        var Y = 285;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+
+        var X = 200 + parseInt(data.korh, 19);
+        var Y = 335;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+    
+        var X = 200 + parseInt(data.moru, 19);
+        var Y = 385;
+        var R = 6;
+        ctx.beginPath();
+        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath();
+    });
+    
+    btnData.onclick=function () {
+ //Ny data
+        fetch("https://bacit.info/hwr/" + timetrxidPASTE.value + ".json", {cache: 'no-cache'})
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                results.innerText = JSON.stringify(data);
+                document.querySelector("#debug").innerText = "Fornavn: " + data.Fornavn;
+
+                ctx.fillStyle = "black";
+                ctx.fillText(data.Fornavn, 820, 330);
+                var X = 800;
+                var Y = 325;
+                var R = 6;
+                ctx.beginPath();
+                ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+                ctx.fillStyle = "lightgreen";
+                ctx.fill();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.closePath();
+
+                var X = 200 + parseInt(data.dorn, 19);
+                var Y = 85;
+                var R = 6;
+                ctx.beginPath();
+                ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+                ctx.fillStyle = "lightgreen";
+                ctx.fill();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.closePath();
+
+                var X = 200 + parseInt(data.cora, 19);
+                var Y = 135;
+                var R = 6;
+                ctx.beginPath();
+                ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+                ctx.fillStyle = "lightgreen";
+                ctx.fill();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.closePath();
+
+                var X = 200 + parseInt(data.jorsl, 19);
+                var Y = 185;
+                var R = 6;
+                ctx.beginPath();
+                ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+                ctx.fillStyle = "lightgreen";
+                ctx.fill();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.closePath();
+
+                var X = 200 + parseInt(data.bori, 19);
+                var Y = 235;
+                var R = 6;
+                ctx.beginPath();
+                ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+                ctx.fillStyle = "lightgreen";
+                ctx.fill();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.closePath();
+
+                var X = 200 + parseInt(data.iore, 19);
+                var Y = 285;
+                var R = 6;
+                ctx.beginPath();
+                ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+                ctx.fillStyle = "lightgreen";
+                ctx.fill();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.closePath();
+
+                var X = 200 + parseInt(data.korh, 19);
+                var Y = 335;
+                var R = 6;
+                ctx.beginPath();
+                ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+                ctx.fillStyle = "lightgreen";
+                ctx.fill();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.closePath();
+
+                var X = 200 + parseInt(data.moru, 19);
+                var Y = 385;
+                var R = 6;
+                ctx.beginPath();
+                ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+                ctx.fillStyle = "lightgreen";
+                ctx.fill();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.closePath();
+            });
+    }
+
+
         </script>
 </section>
-
-
 </body>
-
-
-
 </html>
